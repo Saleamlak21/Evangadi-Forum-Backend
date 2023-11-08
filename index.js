@@ -8,7 +8,7 @@ const { StatusCodes } = require("http-status-codes");
 const port = process.env.PORT;
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 app.use("/api/user", userRoute);
